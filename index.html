@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./tailwind.css">
+</head>
+
+<body class="bg-gray-100">
+  <div class="flex flex-col space-y-4 justify-items-center container mx-auto px-4 flex items-center">
+    <section class="">
+      <h1 class="font-bold text-center m-10 text-3xl">Calcule o seu IMC (Índice de Massa Corpórea) </h1>
+      <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center text-lg font-medium">IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o
+        peso ideal de cada pessoa. <br /><br />
+  
+        O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado. Diz-se
+        que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9. <br /><br />
+  
+        Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela.
+        Importante: siga os exemplos e use pontos como separadores.</p>
+  
+      <form class="grid justify-items-center gap-10 m-10" action="" method="get">
+        <label class="bg-blue-500 text-white py-2 px-4 rounded font-bold text-center sm:text-left">Altura (ex.: 1,70)
+          <input id="altura" type="number" step="0.010" class="text-black">
+        </label>
+  
+        <label id="form" class="bg-blue-500 text-white py-2 px-4 rounded font-bold pl-7 text-center sm:text-left">Peso (ex.: 69,2)
+          <input id="peso" type="number" step="0.010" class="text-black">
+        </label>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Calcular</button>
+      </form>
+  
+      <div id="perguntas">
+        <p id="resultado" class="text-center m-5">Seu IMC: </p>
+      </div>
+    </section>
+  </div>
+
+  </section>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
