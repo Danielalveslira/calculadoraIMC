@@ -1,24 +1,46 @@
-let contador = 1;
-function meuEscopo() {
-  const form = document.querySelector('form');
-  
-  const resultado = document.querySelector('#resultado');
-  const perguntas = [];
+const form = document.querySelector('form');
 
-  function recebeEventoForm(evento) {
-    evento.preventDefault();
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const inputPeso = e.target.querySelector('#peso');
+  const inputAltura = e.target.querySelector('#altura');
 
-    const altura = form.querySelector('#altura');
-    const peso = form.querySelector('#peso');
+  const peso = Number(inputPeso.value);
+  const altura = Number(inputAltura.value);
 
-    const inputs = {
-      altura: altura.value,
-      peso: peso.value
-    }
-    
-    resultado.textContent = Math.round (inputs.peso / (inputs.altura * inputs.altura));
+  if (!peso) {
+    setResultado('Peso inválido', false);
+    return;
   }
-  form.addEventListener('submit', recebeEventoForm);
+
+  if (!altura) {
+    setResultado('Altura inválido', false)
+    return;
+  }
+
+  const imc = getImc(peso, altura);
+  console.log(imc)
+});
+
+function getImc (peso, altura) {
+  const imc = peso / altura ** 2;
+  return imc.toFixed(2);
 }
 
-meuEscopo()
+// Função únicamente para criar um paragrafo
+function criaP () {
+  const p = document.createElement('p');
+  return p;
+}
+
+function setResultado (msg, isValid) {
+  const resultado = document.querySelector('#resultado');
+  resultado.innerHTML = '';
+
+  const p = criaP();
+  p.innerHTML = msg;
+  resultado.appendChild(p);
+
+}
+
+setResultado()
