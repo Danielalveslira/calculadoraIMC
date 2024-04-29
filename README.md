@@ -25,3 +25,5 @@ Um dos principais desafios que enfrentei foi entender e aplicar eficientemente o
 Além disso, trabalhar na lógica por trás da calculadora de Índice de Massa Corporal (IMC) também foi desafiador, especialmente para garantir que os cálculos estivessem precisos e que a interface fosse intuitiva para os usuários.
 
 Ao finalizar o projeto, ganhei uma compreensão mais profunda do Tailwind CSS, aprimorei minhas habilidades em JavaScript e desenvolvi uma aplicação funcional e amigável para o usuário. Foi uma jornada de aprendizado gratificante e estimulante!
+
+![Captura de tela de 2024-04-28 21-22-25](https://github.com/Danielalveslira/calculadoraIMC/assets/124009137/c4166248-68f3-4427-8feb-cf4ff2ba869f)
